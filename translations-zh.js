@@ -185,3 +185,17 @@ window.CHINESE_TEXT = {
   "Contact | Smart Start International School": "联系我们 | Smart Start 国际学校",
   "Apply Now | Smart Start International School": "立即申请 | Smart Start 国际学校"
 };
+
+Object.assign(window.CHINESE_TEXT, {
+  "Let's connect on Telegram": "通过 Telegram 联系我们",
+  "Your child's journey starts with a hello.": "孩子的学习之旅，从一句问候开始。",
+  "Scan our school QR code in Telegram to ask about admissions, arrange a campus visit, or speak with our team.": "在 Telegram 中扫描学校二维码，咨询入学、预约参观校园，或与我们的团队交流。",
+  "Scan with Telegram or your phone camera": "使用 Telegram 或手机相机扫描",
+  "We'd love to meet your family.": "我们期待认识您的家庭。",
+  "When you message us, please share your name, your child's age, and the program you're interested in.": "发送消息时，请告诉我们您的姓名、孩子的年龄，以及您感兴趣的课程。",
+  "School Telegram QR image placeholder": "学校 Telegram 二维码图片占位图"
+});
+
+Object.assign(window.CHINESE_TEXT, {"Telegram 1":"Telegram 1","Telegram 2":"Telegram 2"});
+
+Object.assign(window.CHINESE_TEXT, {"Contact Now":"立即联系","Contact Now →":"立即联系 →"});

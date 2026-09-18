@@ -6,8 +6,6 @@
   --spacing: 0.25rem;
   --font-weight-extrabold: 800;
   --radius-xl: 0.75rem;
-  --default-transition-duration: 150ms;
-  --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .visible {
   visibility: visible;
@@ -20,32 +18,6 @@
 }
 .grid {
   display: grid;
-}
-.transform {
-  transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-}
-.flex-wrap {
-  flex-wrap: wrap;
-}
-.border {
-  border-style: var(--tw-border-style);
-  border-width: 1px;
-}
-.outline {
-  outline-style: var(--tw-outline-style);
-  outline-width: 1px;
-}
-.filter {
-  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-}
-.backdrop-filter {
-  -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-  backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-}
-.transition {
-  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
-  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-  transition-duration: var(--tw-duration, var(--default-transition-duration));
 }
 :root {
   --navy: #0b2d67;
@@ -796,124 +768,136 @@ html[lang="zh"] h1,html[lang="zh"] h2 {
 html[lang="zh"] .eyebrow {
   letter-spacing: 0;
 }
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
+.telegram-card {
+  text-align: center;
+  align-self: center;
+  padding: 40px;
+  overflow: hidden;
 }
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
+.telegram-icon {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 18px;
+  background: #e7f5ff;
+  color: #229ed9;
+  border-radius: 20px;
+  font-size: 32px;
 }
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
+.telegram-card>.eyebrow {
+  color: var(--blue);
 }
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
+.telegram-card h2 {
+  font-size: clamp(1.8rem,3vw,2.5rem);
+  line-height: 1.2;
+  margin: 14px 0;
+  color: var(--navy);
 }
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
+.telegram-intro {
+  color: var(--muted);
+  max-width: 430px;
+  margin: 0 auto 24px;
+}
+.telegram-qr-frame {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  border: 1px solid #dce6f6;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(15,48,105,.06);
+}
+.telegram-qr {
+  width: 240px;
+  height: auto;
+  max-width: 100%;
+}
+.telegram-caption {
+  font-size: .85rem;
+  color: var(--muted);
+  margin: 14px 0 24px;
+}
+.telegram-note {
+  padding: 18px 20px;
+  text-align: left;
+  background: var(--soft);
+  border-radius: 16px;
+  color: var(--navy);
+}
+.telegram-note p {
+  margin: 6px 0 0;
+  font-size: .95rem;
+  color: var(--muted);
+}
+@media (max-width:700px) {
+  .telegram-card {
+    padding: 28px 22px;
+  }
+}
+.telegram-qr-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 18px;
+  align-items: start;
+}
+.telegram-qr-item {
+  min-width: 0;
+}
+.telegram-qr-item .telegram-qr-frame {
+  padding: 12px;
+}
+.telegram-qr-item h3 {
+  font-size: 1rem;
+  color: var(--navy);
+  margin: 12px 0 0;
+}
+@media (max-width:420px) {
+  .telegram-qr-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+@media (max-width:1000px) {
+  .nav>.apply {
+    display: inline-flex;
+  }
+}
+@media (max-width:700px) {
+  .nav {
+    gap: 10px;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 74px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .nav>.apply {
+    font-size: .8rem;
+    padding: 10px 12px !important;
+  }
+  .nav .links {
+    top: 100%;
+  }
+  .nav .brand {
+    min-width: 0;
+  }
+  .nav .brand strong {
+    font-size: .75rem;
+  }
+  .nav .brand small {
+    font-size: .7rem;
+  }
+  .nav .brand img {
+    width: 44px;
+    height: 44px;
+  }
 }
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-blur {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-brightness {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-contrast {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-grayscale {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-hue-rotate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-invert {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-opacity {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-saturate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-sepia {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow-alpha {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
-@property --tw-drop-shadow-size {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-blur {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-brightness {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-contrast {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-grayscale {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-hue-rotate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-invert {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-opacity {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-saturate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-sepia {
-  syntax: "*";
-  inherits: false;
 }
 @property --tw-font-weight {
   syntax: "*";
@@ -922,35 +906,7 @@ html[lang="zh"] .eyebrow {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-rotate-x: initial;
-      --tw-rotate-y: initial;
-      --tw-rotate-z: initial;
-      --tw-skew-x: initial;
-      --tw-skew-y: initial;
       --tw-border-style: solid;
-      --tw-outline-style: solid;
-      --tw-blur: initial;
-      --tw-brightness: initial;
-      --tw-contrast: initial;
-      --tw-grayscale: initial;
-      --tw-hue-rotate: initial;
-      --tw-invert: initial;
-      --tw-opacity: initial;
-      --tw-saturate: initial;
-      --tw-sepia: initial;
-      --tw-drop-shadow: initial;
-      --tw-drop-shadow-color: initial;
-      --tw-drop-shadow-alpha: 100%;
-      --tw-drop-shadow-size: initial;
-      --tw-backdrop-blur: initial;
-      --tw-backdrop-brightness: initial;
-      --tw-backdrop-contrast: initial;
-      --tw-backdrop-grayscale: initial;
-      --tw-backdrop-hue-rotate: initial;
-      --tw-backdrop-invert: initial;
-      --tw-backdrop-opacity: initial;
-      --tw-backdrop-saturate: initial;
-      --tw-backdrop-sepia: initial;
       --tw-font-weight: initial;
     }
   }

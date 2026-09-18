@@ -73,9 +73,6 @@
           <a href="gallery" class="" data-i18n="gallery">
             Gallery
           </a>
-          <a href="contact" class="active" data-i18n="contact">
-            Contact
-          </a>
         </div>
         <select class="lang" aria-label="Language">
           <option value="km" >
@@ -88,8 +85,8 @@
             🇨🇳 中文
           </option>
         </select>
-        <a class="apply" href="apply" data-i18n="apply">
-          Apply Now
+        <a class="apply" href="contact#telegram-title" data-i18n="contact-now">
+          Contact Now
         </a>
       </nav>
     </header>
@@ -114,10 +111,10 @@
         <div class="wrap split">
           <div class="info-card">
             <span class="eyebrow">
-              Let’s connect
+              Admissions
             </span>
             <h2>
-              Come and say hello.
+              A warm welcome starts here.
             </h2>
             <p>
               📍 Phnom Penh, Cambodia
@@ -146,67 +143,30 @@
               </a>
             </div>
           </div>
-          <form class="form" novalidate data-type="contact">
-            <div class="success" role="status">
-              Thank you! Your message has been received. Our team will contact you soon.
-            </div>
-            <div class="grid two">
-              <div class="field">
-                <label for="name">
-                  Full name *
-                </label>
-                <input id="name" name="name" autocomplete="name" required>
-                <div class="error">
+          <section class="form telegram-card" aria-labelledby="telegram-title">
+            <div class="telegram-icon" aria-hidden="true">✈</div>
+            <span class="eyebrow">Let's connect on Telegram</span>
+            <h2 id="telegram-title">Your child's journey starts with a hello.</h2>
+            <p class="telegram-intro">Scan our school QR code in Telegram to ask about admissions, arrange a campus visit, or speak with our team.</p>
+            <div class="telegram-qr-grid">
+              <div class="telegram-qr-item">
+                <div class="telegram-qr-frame">
+                  <!-- Replace this src with your first QR image filename. -->
+                  <img class="telegram-qr" src="assets/telegram-qr.svg" width="240" height="240" alt="School Telegram QR image placeholder">
                 </div>
+                <h3>Telegram 1</h3>
               </div>
-              <div class="field">
-                <label for="email">
-                  Email address *
-                </label>
-                <input id="email" name="email" type="email" autocomplete="email" required>
-                <div class="error">
+              <div class="telegram-qr-item">
+                <div class="telegram-qr-frame">
+                  <!-- Replace this src with your second QR image filename. -->
+                  <img class="telegram-qr" src="assets/telegram-qr-2.svg" width="240" height="240" alt="School Telegram QR image placeholder">
                 </div>
+                <h3>Telegram 2</h3>
               </div>
             </div>
-            <div class="grid two">
-              <div class="field">
-                <label for="phone">
-                  Phone number *
-                </label>
-                <input id="phone" name="phone" type="tel" autocomplete="tel" required>
-                <div class="error">
-                </div>
-              </div>
-              <div class="field">
-                <label for="topic">
-                  Topic
-                </label>
-                <select id="topic" name="topic">
-                  <option>
-                    Admissions
-                  </option>
-                  <option>
-                    Campus visit
-                  </option>
-                  <option>
-                    General enquiry
-                  </option>
-                </select>
-              </div>
-            </div>
-            <div class="field">
-              <label for="message">
-                How can we help? *
-              </label>
-              <textarea id="message" name="message" rows="5" required>
-              </textarea>
-              <div class="error">
-              </div>
-            </div>
-            <button class="btn" type="submit">
-              Send message →
-            </button>
-          </form>
+            <p class="telegram-caption">Scan with Telegram or your phone camera</p>
+            <div class="telegram-note"><strong>We'd love to meet your family.</strong><p>When you message us, please share your name, your child's age, and the program you're interested in.</p></div>
+          </section>
         </div>
       </section>
     </main>
@@ -223,8 +183,8 @@
             Book a friendly campus visit and meet our learning community.
           </p>
         </div>
-        <a class="btn" href="apply" data-i18n="apply" data-i18n-suffix=" →">
-          Apply Now →
+        <a class="btn" href="contact#telegram-title" data-i18n="contact-now" data-i18n-suffix=" →">
+          Contact Now →
         </a>
       </div>
     </section>

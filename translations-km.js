@@ -185,3 +185,17 @@ window.KHMER_TEXT = {
   "Contact | Smart Start International School": "ទំនាក់ទំនង | សាលាអន្តរជាតិ ស្មាតស្តាត",
   "Apply Now | Smart Start International School": "ចុះឈ្មោះឥឡូវ | សាលាអន្តរជាតិ ស្មាតស្តាត"
 };
+
+Object.assign(window.KHMER_TEXT, {
+  "Let's connect on Telegram": "ទាក់ទងយើងតាម Telegram",
+  "Your child's journey starts with a hello.": "ដំណើរសិក្សារបស់កូនអ្នកចាប់ផ្តើមពីការសួរស្តី។",
+  "Scan our school QR code in Telegram to ask about admissions, arrange a campus visit, or speak with our team.": "ស្កេនកូដ QR របស់សាលាយើងក្នុង Telegram ដើម្បីសួរអំពីការចុះឈ្មោះ រៀបចំការទស្សនាសាលា ឬទាក់ទងក្រុមការងារយើង។",
+  "Scan with Telegram or your phone camera": "ស្កេនតាម Telegram ឬកាមេរ៉ាទូរស័ព្ទរបស់អ្នក",
+  "We'd love to meet your family.": "យើងរីករាយនឹងជួបគ្រួសាររបស់អ្នក។",
+  "When you message us, please share your name, your child's age, and the program you're interested in.": "ពេលផ្ញើសារ សូមប្រាប់ឈ្មោះរបស់អ្នក អាយុកូន និងកម្មវិធីសិក្សាដែលអ្នកចាប់អារម្មណ៍។",
+  "School Telegram QR image placeholder": "កន្លែងដាក់រូបភាពកូដ QR Telegram របស់សាលា"
+});
+
+Object.assign(window.KHMER_TEXT, {"Telegram 1":"Telegram ទី ១","Telegram 2":"Telegram ទី ២"});
+
+Object.assign(window.KHMER_TEXT, {"Contact Now":"ទាក់ទងឥឡូវនេះ","Contact Now →":"ទាក់ទងឥឡូវនេះ →"});
