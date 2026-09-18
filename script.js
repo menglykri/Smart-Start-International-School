@@ -8,7 +8,7 @@ const relativePath=location.pathname.slice(siteBase.pathname.length);
 const route=relativePath.split('/').filter(Boolean)[0]?.replace(/\.html$/, '')||'';
 let key=['about','programs','teachers','news','events','gallery','rankings','contact','apply'].includes(route)?route:'home';
 if(location.protocol!=='file:'){
-  const canonicalPath=siteBase.pathname+(key==='home'?'':key);
+  const canonicalPath=siteBase.pathname+(key==='home'?'':key+'/');
   if(location.pathname!==canonicalPath){
     history.replaceState(null,'',canonicalPath+location.search+location.hash);
   }
@@ -157,7 +157,7 @@ async function navigatePage(url, pushHistory = true) {
     const description = next.querySelector('meta[name="description"]');
     if (description) document.querySelector('meta[name="description"]').content = description.content;
     key = route;
-    const canonical = new URL(route === 'home' ? './' : route, siteBase);
+    const canonical = new URL(route === 'home' ? './' : route + '/', siteBase);
     canonical.search = url.search;
     canonical.hash = url.hash;
     if (pushHistory) history.pushState(null, '', canonical);

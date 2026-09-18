@@ -6,8 +6,8 @@ Serve the folder with a static web server (for example, VS Code Live Server),
 then open the root URL, such as `http://127.0.0.1:5500/`. Pages use clean
 URLs such as `/about`, `/programs`, and `/apply`, each backed by a directory
 with an `index.html` file so direct visits and refreshes work on Live Server.
-Static servers may initially add a trailing slash; the page removes it from
-the address bar using the History API, preserving query strings and anchors.
+Directory pages retain a trailing slash, such as `/about/`, so relative assets
+resolve correctly on Live Server and GitHub Pages, including after refresh.
 The duplicate root-level `.html` pages have been removed; use the clean URLs.
 All pages share
 `styles.css` and `script.js`. Use a server for clean URLs rather than opening
@@ -58,3 +58,11 @@ Edit `rankings/index.html` to change class labels and the three student names in
 each class. The initial template contains Kindergarten 1–3 and Grades 1–6;
 add, rename, or remove class cards to match the school. Replace `To be announced`
 with confirmed names, and update the results notice when rankings are published.
+
+## GitHub Pages
+
+Publish the repository root, including `header.html`, `footer.html`, `script.js`,
+`styles.css`, the translations, route directories, and `.nojekyll`. The site supports
+GitHub Pages project URLs such as `/Smart-Start-International-School/`.
+Use the deployed GitHub Pages URL to view the website; GitHub repository file views
+do not run the website. Keep directory URLs ending in `/` when sharing page links.
