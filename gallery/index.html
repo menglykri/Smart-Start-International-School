@@ -14,82 +14,15 @@
     </title>
     <link rel="icon" href="assets/logo-square.png" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" href="header.html" as="fetch" crossorigin />
+    <link rel="preload" href="footer.html" as="fetch" crossorigin />
     <script defer src="translations-km.js"></script>
     <script defer src="translations-zh.js"></script>
     <script defer src="script.js">
     </script>
   </head>
   <body>
-    <a class="skip" href="#main">
-      Skip to content
-    </a>
-    <div class="topbar">
-      <div class="wrap">
-        <span>
-          📍 Phnom Penh, Cambodia
-        </span>
-        <span>
-          ☎ +855 23 555 0123 · ✉ info@smartstart.edu.kh
-        </span>
-      </div>
-    </div>
-    <header class="header">
-      <nav class="nav wrap" aria-label="Main navigation">
-        <a class="brand" href="./">
-          <img src="assets/logo-square.png" alt="Smart Start school shield">
-          <span>
-            <strong>
-              SMART START
-              <br>
-              INTERNATIONAL SCHOOL
-            </strong>
-            <small>
-              Kindergarten & Primary
-            </small>
-          </span>
-        </a>
-        <button class="menu" aria-label="Open menu" aria-expanded="false">
-          ☰
-        </button>
-        <div class="links">
-          <a href="./" class="" data-i18n="home">
-            Home
-          </a>
-          <a href="about" class="" data-i18n="about">
-            About School
-          </a>
-          <a href="programs" class="" data-i18n="programs">
-            Programs
-          </a>
-          <a href="teachers" class="" data-i18n="teachers">
-            Teachers
-          </a>
-          <a href="news" class="" data-i18n="news">
-            News
-          </a>
-          <a href="events" class="" data-i18n="events">
-            Events
-          </a>
-          <a href="gallery" class="active" data-i18n="gallery">
-            Gallery
-          </a>
-        </div>
-        <select class="lang" aria-label="Language">
-          <option value="km" >
-            🇰🇭 ខ្មែរ
-          </option>
-          <option value="en" selected>
-            🇬🇧 EN
-          </option>
-          <option value="zh" >
-            🇨🇳 中文
-          </option>
-        </select>
-        <a class="apply" href="contact#telegram-title" data-i18n="contact-now">
-          Contact Now
-        </a>
-      </nav>
-    </header>
+    <div data-include="header.html"></div>
     <main id="main">
       <section class="page-hero">
         <div class="wrap">
@@ -149,66 +82,12 @@
             Book a friendly campus visit and meet our learning community.
           </p>
         </div>
-        <a class="btn" href="contact#telegram-title" data-i18n="contact-now" data-i18n-suffix=" →">
+        <a class="btn" href="contact/#telegram-title" data-i18n="contact-now" data-i18n-suffix=" →">
           Contact Now →
         </a>
       </div>
     </section>
-    <footer class="footer">
-      <div class="wrap">
-        <div class="footer-grid">
-          <div>
-            <img class="footer-logo" src="assets/logo-wide.png" alt="Smart Start International School">
-            <p data-i18n="footer">
-              Learning today. Leading tomorrow.
-            </p>
-          </div>
-          <div>
-            <h3>
-              School
-            </h3>
-            <a href="about" data-i18n="about">
-              About School
-            </a>
-            <a href="programs" data-i18n="programs">
-              Programs
-            </a>
-            <a href="teachers" data-i18n="teachers">
-              Teachers
-            </a>
-          </div>
-          <div>
-            <h3>
-              Community
-            </h3>
-            <a href="news" data-i18n="news">
-              News
-            </a>
-            <a href="events" data-i18n="events">
-              Events
-            </a>
-            <a href="gallery" data-i18n="gallery">
-              Gallery
-            </a>
-          </div>
-          <div>
-            <h3>
-              Visit us
-            </h3>
-            <p>
-              Phnom Penh, Cambodia
-              <br>
-              Mon–Fri · 7:30–16:30
-              <br>
-              +855 23 555 0123
-            </p>
-          </div>
-        </div>
-        <div class="copyright">
-          © 2026 Smart Start International School. All rights reserved.
-        </div>
-      </div>
-    </footer>
+    <div data-include="footer.html"></div>
     <div class="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image">
       <button aria-label="Close">
         ×

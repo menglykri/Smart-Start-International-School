@@ -2,7 +2,7 @@
 window.KHMER_TEXT = {
   "Smart Start International School": "សាលាអន្តរជាតិ ស្មាតស្តាត",
   "Skip to content": "រំលងទៅមាតិកា",
-  "📍 Phnom Penh, Cambodia": "📍 រាជធានីភ្នំពេញ ប្រទេសកម្ពុជា",
+  "📍 Phum Barach, Sangkat Svay Chrum, Krong Arey Ksat, Kandal Province": "📍 ភូមិបារាជ សង្កាត់ស្វាយជ្រំ ក្រុងអរិយក្សត្រ ខេត្តកណ្តាល",
   "SMART START": "ស្មាតស្តាត",
   "INTERNATIONAL SCHOOL": "សាលាអន្តរជាតិ",
   "Kindergarten & Primary": "មត្តេយ្យ និងបឋមសិក្សា",
@@ -46,7 +46,7 @@ window.KHMER_TEXT = {
   "School": "សាលា",
   "Community": "សហគមន៍",
   "Visit us": "មកទស្សនាយើង",
-  "Phnom Penh, Cambodia": "រាជធានីភ្នំពេញ ប្រទេសកម្ពុជា",
+  "Phum Barach, Sangkat Svay Chrum, Krong Arey Ksat, Kandal Province": "ភូមិបារាជ សង្កាត់ស្វាយជ្រំ ក្រុងអរិយក្សត្រ ខេត្តកណ្តាល",
   "Mon–Fri · 7:30–16:30": "ចន្ទ–សុក្រ · ៧:៣០–១៦:៣០",
   "© 2026 Smart Start International School. All rights reserved.": "© ២០២៦ សាលាអន្តរជាតិ ស្មាតស្តាត។ រក្សាសិទ្ធិគ្រប់យ៉ាង។",
   "Smart Start International School — joyful, future-ready learning in Cambodia.": "សាលាអន្តរជាតិ ស្មាតស្តាត — ការសិក្សាដ៏រីករាយនៅកម្ពុជា ដែលត្រៀមកុមារសម្រាប់អនាគត។",
@@ -199,3 +199,26 @@ Object.assign(window.KHMER_TEXT, {
 Object.assign(window.KHMER_TEXT, {"Telegram 1":"Telegram ទី ១","Telegram 2":"Telegram ទី ២"});
 
 Object.assign(window.KHMER_TEXT, {"Contact Now":"ទាក់ទងឥឡូវនេះ","Contact Now →":"ទាក់ទងឥឡូវនេះ →"});
+
+Object.assign(window.KHMER_TEXT, {
+  "Rankings": "ចំណាត់ថ្នាក់សិស្ស",
+  "Student Rankings": "ចំណាត់ថ្នាក់សិស្ស",
+  "/ Student Rankings": "/ ចំណាត់ថ្នាក់សិស្ស",
+  "Celebrating achievement": "អបអរសាទរសមិទ្ធផល",
+  "Celebrating the top three students in every class.": "អបអរសាទរសិស្សដែលទទួលបានចំណាត់ថ្នាក់កំពូលទាំងបីក្នុងថ្នាក់នីមួយៗ។",
+  "Results have not been published yet. Student names will be added after confirmation.": "លទ្ធផលមិនទាន់ត្រូវបានប្រកាសទេ។ ឈ្មោះសិស្សនឹងត្រូវបានបន្ថែមបន្ទាប់ពីការបញ្ជាក់។",
+  "Top 3 students": "សិស្សកំពូលទាំង ៣",
+  "Rank": "ចំណាត់ថ្នាក់",
+  "Student name": "ឈ្មោះសិស្ស",
+  "To be announced": "នឹងប្រកាសនៅពេលក្រោយ",
+  "Student Rankings | Smart Start International School": "ចំណាត់ថ្នាក់សិស្ស | សាលាអន្តរជាតិ ស្មាតស្តាត",
+  "Kindergarten 1": "មត្តេយ្យកម្រិត 1",
+  "Kindergarten 2": "មត្តេយ្យកម្រិត 2",
+  "Kindergarten 3": "មត្តេយ្យកម្រិត 3",
+  "Grade 1": "ថ្នាក់ទី 1",
+  "Grade 2": "ថ្នាក់ទី 2",
+  "Grade 3": "ថ្នាក់ទី 3",
+  "Grade 4": "ថ្នាក់ទី 4",
+  "Grade 5": "ថ្នាក់ទី 5",
+  "Grade 6": "ថ្នាក់ទី 6"
+});

@@ -199,3 +199,26 @@ Object.assign(window.CHINESE_TEXT, {
 Object.assign(window.CHINESE_TEXT, {"Telegram 1":"Telegram 1","Telegram 2":"Telegram 2"});
 
 Object.assign(window.CHINESE_TEXT, {"Contact Now":"立即联系","Contact Now →":"立即联系 →"});
+
+Object.assign(window.CHINESE_TEXT, {
+  "Rankings": "学生排名",
+  "Student Rankings": "学生排名",
+  "/ Student Rankings": "/ 学生排名",
+  "Celebrating achievement": "庆祝成就",
+  "Celebrating the top three students in every class.": "表彰每个班级的前三名学生。",
+  "Results have not been published yet. Student names will be added after confirmation.": "成绩尚未公布。确认后将添加学生姓名。",
+  "Top 3 students": "前三名学生",
+  "Rank": "名次",
+  "Student name": "学生姓名",
+  "To be announced": "待公布",
+  "Student Rankings | Smart Start International School": "学生排名 | Smart Start 国际学校",
+  "Kindergarten 1": "幼儿园 1 班",
+  "Kindergarten 2": "幼儿园 2 班",
+  "Kindergarten 3": "幼儿园 3 班",
+  "Grade 1": "1 年级",
+  "Grade 2": "2 年级",
+  "Grade 3": "3 年级",
+  "Grade 4": "4 年级",
+  "Grade 5": "5 年级",
+  "Grade 6": "6 年级"
+});

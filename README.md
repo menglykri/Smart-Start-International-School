@@ -36,11 +36,25 @@ Home, About School, Programs, Teachers, News, Events, Gallery, Contact, and Appl
 
 Each page contains its complete HTML. Edit `index.html` for Home or
 `about/index.html`, `programs/index.html`, etc. for the other pages.
-Headers and footers are included in each file, so shared content changes
-should be applied to each page. `script.js` handles interactions and language
-selection; it does not generate page markup. English comes from the HTML files.
+Edit `header.html` to change the shared top bar and navigation. Edit `footer.html`
+to change the shared footer. All eight content pages load these two files through
+`script.js`, which also highlights the current navigation link and handles
+interactions and language selection after the shared markup loads. Internal links
+replace page content while retaining the header and footer, so the logo stays in
+place. Browser Back/Forward and direct page visits remain supported. Use Live Server
+or another HTTP server; shared includes cannot load when opening HTML via `file://`.
+Start Live Server from `index.html` to preview the complete website. Opening
+`header.html` or `footer.html` directly redirects to the homepage.
+The `/apply` page remains a redirect to Contact. English comes from the HTML files.
 `translations-km.js` and `translations-zh.js` contain Khmer and Simplified Chinese
 translations for all page text, form labels,
 validation messages, page titles, and accessibility labels. When editing English
 content, update its corresponding entry in both dictionaries as well. Email addresses,
 phone numbers, and language names remain unchanged.
+
+## Student rankings
+
+Edit `rankings/index.html` to change class labels and the three student names in
+each class. The initial template contains Kindergarten 1–3 and Grades 1–6;
+add, rename, or remove class cards to match the school. Replace `To be announced`
+with confirmed names, and update the results notice when rankings are published.
