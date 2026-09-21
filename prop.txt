@@ -1,0 +1,271 @@
+BUILD A COMPLETE PREMIUM SCHOOL WEBSITE
+
+Create a production-quality, responsive website for “Smart Start International School,” a kindergarten and primary school in Cambodia. The finished website should feel warm, trustworthy, joyful, modern, and premium. Build the complete working project, not only a mockup. Use plain HTML, CSS, and JavaScript with Tailwind CSS compilation where useful. Keep the project easy for a school administrator or developer to maintain.
+
+IMPORTANT WORKFLOW
+
+- Inspect the existing project before changing anything if files already exist.
+- Preserve working content and user changes unless they conflict with this specification.
+- Implement every requested page and interaction fully.
+- Do not leave placeholder buttons, href="#" links, empty pages, or fake controls.
+- Compile the final CSS and verify JavaScript syntax before finishing.
+- Test desktop, tablet, and mobile layouts.
+- Use semantic HTML, descriptive alt text, keyboard-accessible controls, visible focus states, and reduced-motion support.
+- Use clean page URLs without trailing slashes, such as /about, /programs, /gallery, and /rankings.
+- Internal section links should use clean URLs such as /activities#early-years rather than /activities/#early-years.
+
+BRAND AND VISUAL STYLE
+
+Use this visual system consistently:
+
+- Navy: #0b2d67
+- Blue: #174da5
+- Royal blue: #286bd7
+- Green accent: #8bc400
+- Pink accent: #c2185b
+- Main text: #13213c
+- Muted text: #60708d
+- Soft background: #f4f8ff
+- White: #ffffff
+- Primary shadow: 0 18px 45px rgba(15, 48, 105, 0.12)
+- Large rounded cards: approximately 20–32px radius
+- Font: Nunito for English and Chinese-compatible fallbacks; Battambang for Khmer
+- Spacious layouts, strong typography, gentle gradients, high-quality school photography, soft shadows, and clear visual hierarchy
+- Avoid generic template styling. The website should feel designed specifically for an international school.
+
+SHARED HEADER
+
+Create a shared sticky header loaded across all pages. Include:
+
+- A navy top information bar with the school address, telephone numbers, and email
+- School logo, name, and “Kindergarten & Primary” label
+- Navigation: Home, About School, Programs, Teachers, News, Events, Gallery, Rankings
+- Khmer, English, and Simplified Chinese language selector
+- A prominent pink “Contact Now” button
+- Active-page highlighting
+- Responsive hamburger navigation
+- Smooth hover effects and keyboard accessibility
+
+SHARED FOOTER
+
+Create a shared dark navy footer containing:
+
+- School logo and short brand statement
+- School navigation links
+- Community navigation links
+- Address, opening hours, telephone numbers, and email
+- Centered copyright text
+- Generate the copyright year automatically with JavaScript using new Date().getFullYear()
+
+REQUIRED PAGES
+
+1. HOME
+
+- Premium hero with school photography, strong headline, short supporting text, primary CTA, and secondary CTA
+- School statistics cards
+- Welcome/about section with photography and quote card
+- “Why families choose us” cards
+- Early Years, Primary School, and Language Pathways cards linking to their matching sections on /activities
+- Admissions call-to-action
+
+2. ABOUT SCHOOL
+
+- Page hero and breadcrumb
+- School story
+- Values and school philosophy
+- Timeline or journey section
+- Strong photography and welcoming copy
+
+3. PROGRAMS
+
+Display six premium program cards:
+
+- Early Years
+- Primary School
+- Language Pathways
+- Creative Arts
+- Sport & Wellbeing
+- Future Skills
+
+Every “Learn more” button must open the matching section on /activities. No button may point to a placeholder or generic contact page.
+
+4. LEARNING ACTIVITIES
+
+Create a premium long-form page at /activities with:
+
+- Large photographic hero
+- Sticky category navigation
+- Six detailed sections matching the six programs
+- Alternating image-and-copy layouts
+- Activity tags and practical examples
+- Clear section anchors: early-years, primary-school, language-pathways, creative-arts, sport-wellbeing, future-skills
+- Campus-visit call-to-action
+
+5. TEACHERS
+
+- Professional teacher cards
+- Consistent portraits
+- Name, role, short biography, and optional social/contact detail
+- Warm, credible tone
+
+6. NEWS
+
+- Premium news cards with images, category labels, titles, excerpts, and “Read story” links
+- Every story link must open real content on /stories
+- Include at least these stories: Learning beyond the classroom, Reading week brings stories alive, Young artists exhibition
+
+7. STORIES
+
+Create a premium editorial page at /stories with:
+
+- Dark branded hero
+- Sticky story navigation
+- Large editorial photography
+- Complete article content, quotes, highlights, and reading metadata
+- Section anchors for every story
+- Admissions or campus-visit CTA
+
+8. EVENTS
+
+- Event cards with date blocks, category, title, time, and location
+- Make the entire card clickable
+- Include a visible “View activities” action
+- Include Family Welcome Morning, International Culture Day, Primary Sports Festival, and Parent Learning Workshop
+- Each card must link to the matching section on /event-details
+
+9. EVENT DETAILS
+
+Create a premium page at /event-details with:
+
+- Strong hero and upcoming-event date card
+- Sticky event navigation
+- A detailed section for every event
+- Large photography
+- Schedule/agenda, activities, practical information, and what to bring
+- Parent Learning Workshop must include parent connection, teacher mini-session, literacy/numeracy activities, questions, and take-home resources
+- Contact/attendance CTA
+
+10. GALLERY
+
+- Create a masonry-style gallery with 20 school photos
+- Initially show only 10 photos
+- Add a polished circular plus icon and “Show 10 more photos” button
+- Clicking the button reveals the remaining 10 photos
+- Hide the button when all photos are visible
+- Every photo opens in an accessible lightbox
+- Support Escape key and click-outside closing
+- Use lazy-loaded images and responsive columns
+
+11. RANKINGS
+
+- Student ranking cards for Kindergarten 1–3 and Grades 1–6
+- Accessible tables with first, second, and third place badges
+- Clear placeholder state when results are not yet available
+- Clean URL: /rankings
+
+12. CONTACT
+
+- Contact form with client-side validation and accessible error messages
+- School information card
+- Embedded map
+- Telegram contact area with QR codes
+- Friendly admissions-focused copy
+- Clear success message after valid submission
+
+LANGUAGE SYSTEM
+
+- English content may live in the HTML files.
+- Store Khmer and Simplified Chinese translations in separate JavaScript dictionaries.
+- The language selector must update page text, form labels, validation messages, titles, descriptions, alt text, and accessibility labels where translations exist.
+- Save the selected language in localStorage.
+- Keep email addresses, telephone numbers, and language names unchanged.
+
+ROUTING AND SHARED LAYOUT
+
+- Use shared header.html and footer.html files.
+- Load them through JavaScript and keep the header/footer mounted during internal page navigation.
+- Support browser Back and Forward navigation.
+- Support direct page visits and refreshes.
+- Display clean URLs without trailing slashes.
+- If directory index files are used, fetch the directory internally but normalize the displayed URL with history.pushState or history.replaceState.
+- Handle hash links correctly even when a base element is present.
+- Never allow same-page section links to navigate accidentally to the homepage.
+- Use Live Server or another HTTP server; do not depend on file:// behavior.
+
+ANIMATION AND INTERACTION
+
+Add tasteful animation across all pages:
+
+- Page fade-in
+- Hero content entrance animation
+- IntersectionObserver-powered scroll reveal
+- Staggered card appearance
+- Card hover lift
+- Image zoom and subtle saturation on hover
+- Button shine effect
+- Logo hover animation
+- Navigation hover movement
+- Statistics hover interaction
+- Event date movement
+- Ranking badge interaction
+- Gallery hover and lightbox entrance
+- Form-field focus animation
+- Gentle floating decorative badges
+
+Keep animations refined and fast. Avoid excessive movement. Respect prefers-reduced-motion and disable nonessential animation when requested by the user’s operating system.
+
+RESPONSIVE REQUIREMENTS
+
+- Desktop: spacious multi-column layouts with strong photography
+- Tablet: reduce columns and use collapsible navigation
+- Mobile: one-column content, readable type, comfortable touch targets, horizontally scrollable sticky category navigation where necessary
+- Avoid horizontal page overflow
+- Ensure sticky navigation does not cover anchored sections
+- Keep all buttons and forms usable at narrow widths
+
+TECHNICAL STRUCTURE
+
+Recommended files:
+
+- index.html
+- header.html
+- footer.html
+- script.js
+- src/styles.css
+- styles.css (compiled output)
+- translations-km.js
+- translations-zh.js
+- assets/
+- about/index.html
+- programs/index.html
+- activities/index.html
+- teachers/index.html
+- news/index.html
+- stories/index.html
+- events/index.html
+- event-details/index.html
+- gallery/index.html
+- rankings/index.html
+- contact/index.html
+
+Use package scripts similar to:
+
+- npm run dev: watch and compile src/styles.css into styles.css
+- npm run build: create the final minified styles.css
+
+FINAL QUALITY CHECK
+
+Before completion:
+
+- Confirm every navigation link works.
+- Confirm every CTA has a real destination.
+- Confirm all anchor links remain on the intended page.
+- Confirm all URLs appear without trailing slashes.
+- Confirm language switching still works.
+- Confirm the gallery initially shows 10 of 20 photos and loads the next 10.
+- Confirm lightbox behavior works.
+- Confirm form validation works.
+- Confirm animations appear on every page and reduced-motion mode works.
+- Confirm CSS compilation succeeds.
+- Confirm JavaScript passes a syntax check.
+- Preserve a premium, consistent school brand throughout the entire website.
