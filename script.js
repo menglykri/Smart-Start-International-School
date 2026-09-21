@@ -53,6 +53,17 @@ async function initializePage() {
   document.querySelectorAll('[data-current-year]').forEach(element => {
     element.textContent = new Date().getFullYear();
   });
+  const scrollTopButton = document.querySelector('.scroll-top');
+  if (scrollTopButton) {
+    scrollTopButton.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+    scrollTopButton.classList.toggle('is-visible', window.scrollY > 500);
+  }
+  if (!document.documentElement.dataset.scrollTopReady) {
+    document.documentElement.dataset.scrollTopReady = 'true';
+    window.addEventListener('scroll', () => {
+      document.querySelector('.scroll-top')?.classList.toggle('is-visible', window.scrollY > 500);
+    }, {passive: true});
+  }
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const animatedElements = Array.from(document.querySelectorAll([
     'main .reveal','main .card','main .stat','main .section-head','main .split > *',
@@ -134,7 +145,30 @@ function updateLanguage(language) {
 setPageLanguage = updateLanguage;
 updateLanguage(localStorage.getItem('ssi-lang') || 'en');
 
-document.querySelector('.menu').onclick=e=>{let n=document.querySelector('.links');n.classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',n.classList.contains('open'))};document.querySelector('.lang').onchange=e=>{localStorage.setItem('ssi-lang',e.target.value);updateLanguage(e.target.value)};
+const menuButton = document.querySelector('.menu');
+const menuLinks = document.querySelector('.links');
+const closeMenu = () => {
+  menuLinks.classList.remove('open');
+  menuButton.setAttribute('aria-expanded', 'false');
+};
+menuButton.onclick = event => {
+  event.stopPropagation();
+  menuLinks.classList.toggle('open');
+  menuButton.setAttribute('aria-expanded', menuLinks.classList.contains('open'));
+};
+if (!document.documentElement.dataset.menuDismissReady) {
+  document.documentElement.dataset.menuDismissReady = 'true';
+  document.addEventListener('click', event => {
+    const currentLinks = document.querySelector('.links');
+    const currentButton = document.querySelector('.menu');
+    if (!currentLinks?.classList.contains('open')) return;
+    if (event.target.closest('.links a') || !event.target.closest('.nav')) {
+      currentLinks.classList.remove('open');
+      currentButton?.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+document.querySelector('.lang').onchange=e=>{localStorage.setItem('ssi-lang',e.target.value);updateLanguage(e.target.value)};
 
 const galleryItems = Array.from(document.querySelectorAll('.gallery > button'));
 const galleryBatchSize = 10;
@@ -157,7 +191,7 @@ if (galleryMore) {
     if (remaining) galleryMore.querySelector('span:last-child').textContent = `Show ${Math.min(galleryBatchSize, remaining)} more photos`;
   };
 }
-let lb=document.querySelector('.lightbox');lb.querySelector('button').onclick=()=>lb.classList.remove('open');lb.onclick=e=>{if(e.target===lb)lb.classList.remove('open')};document.onkeydown=e=>{if(e.key==='Escape')lb.classList.remove('open')};
+let lb=document.querySelector('.lightbox');lb.querySelector('button').onclick=()=>lb.classList.remove('open');lb.onclick=e=>{if(e.target===lb)lb.classList.remove('open')};document.onkeydown=e=>{if(e.key==='Escape'){lb.classList.remove('open');closeMenu()}};
 
 document.querySelectorAll('form').forEach(f=>f.onsubmit=e=>{e.preventDefault();let ok=true;f.querySelectorAll('[required]').forEach(x=>{let msg='';if(!x.value.trim())msg='This field is required.';else if(x.type==='email'&&!/^\S+@\S+\.\S+$/.test(x.value))msg='Enter a valid email address.';const error=x.closest('.field').querySelector('.error');error.dataset.message=msg;error.textContent=localeText(msg);x.setAttribute('aria-invalid',!!msg);if(msg)ok=false});if(ok){f.querySelector('.success').classList.add('show');f.reset();f.querySelector('.success').scrollIntoView({behavior:'smooth',block:'center'})}});
 
@@ -193,7 +227,7 @@ async function navigatePage(url, pushHistory = true) {
     // Restore original strings before collecting the next page's translations.
     setPageLanguage('en');
     const footer = document.querySelector('.footer');
-    const persistent = new Set(document.querySelectorAll('body > .skip, body > .topbar, body > .header, body > .footer'));
+    const persistent = new Set(document.querySelectorAll('body > .skip, body > .topbar, body > .header, body > .footer, body > .scroll-top'));
     Array.from(document.body.children).forEach(node => {
       if (!persistent.has(node)) node.remove();
     });
