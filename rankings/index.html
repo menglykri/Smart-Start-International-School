@@ -24,17 +24,31 @@
   <body>
     <div data-include="header.html"></div>
     <main id="main">
-      <section class="page-hero">
-        <div class="wrap mx-auto max-w-[1400px] px-6 max-[700px]:px-[18px]">
-          <div class="crumb"><a href="./" data-i18n="home">Home</a> <span>/ Student Rankings</span></div>
-          <span class="eyebrow">Celebrating achievement</span>
-          <h1>Student Rankings</h1>
-          <p class="lead">Celebrating the top three students in every class.</p>
+      <section class="rankings-hero">
+        <div class="wrap rankings-hero-inner mx-auto max-w-[1400px] px-6 max-[700px]:px-[18px]">
+          <div class="rankings-hero-copy">
+            <div class="crumb"><a href="./" data-i18n="home">Home</a><span aria-hidden="true">/</span><span>Student Rankings</span></div>
+            <span class="eyebrow">Celebrating achievement</span>
+            <h1>Every effort<br />deserves recognition.</h1>
+            <p>Honouring the learners whose curiosity, consistency and commitment inspire our whole school community.</p>
+          </div>
+          <div class="rankings-hero-award" aria-hidden="true">
+            <span class="rankings-laurel">✦</span>
+            <b>Top 3</b>
+            <small>in every class</small>
+          </div>
         </div>
       </section>
-      <section class="section soft py-[95px] max-[700px]:py-[68px]">
+      <section class="section rankings-section py-[95px] max-[700px]:py-[68px]">
         <div class="wrap mx-auto max-w-[1400px] px-6 max-[700px]:px-[18px]">
-          <p class="ranking-notice">Results have not been published yet. Student names will be added after confirmation.</p>
+          <div class="rankings-intro">
+            <div>
+              <span class="eyebrow">Academic honours</span>
+              <h2>Class leaders</h2>
+              <p>Recognising outstanding learning across Kindergarten and Primary School.</p>
+            </div>
+            <p class="ranking-notice"><span aria-hidden="true">✓</span><span><strong>Results pending confirmation</strong>Student names will appear here after the final academic review.</span></p>
+          </div>
           <!-- Edit class labels and replace each To be announced with the student's name. -->
           <div class="grid three rankings-grid gap-6 grid-cols-3 max-[1000px]:grid-cols-2 max-[700px]:grid-cols-1">
           <article class="card ranking-class overflow-hidden rounded-[24px] border border-[#e6edf7] bg-white shadow-[0_10px_28px_rgba(15,48,105,.07)] transition duration-300 p-[26px] max-[700px]:p-[22px]" aria-labelledby="class-0">

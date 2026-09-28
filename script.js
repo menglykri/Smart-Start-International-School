@@ -7,7 +7,7 @@ if(!base){base=document.createElement('base');document.head.prepend(base)}
 base.href=siteBase.href;
 const relativePath=location.pathname.slice(siteBase.pathname.length);
 const route=relativePath.split('/').filter(Boolean)[0]?.replace(/\.html$/, '')||'';
-let key=['about','programs','activities','stories','event-details','teachers','news','events','gallery','rankings','contact','apply'].includes(route)?route:'home';
+let key=['about','programs','program','stories','event-details','teachers','news','events','gallery','rankings','contact','apply'].includes(route)?route:'home';
 if(location.protocol!=='file:'){
   const canonicalPath=siteBase.pathname+(key==='home'?'':key);
   if(location.pathname!==canonicalPath){
@@ -93,7 +93,7 @@ async function initializePage() {
     animatedElements.forEach(element => revealObserver.observe(element));
   }
   document.querySelectorAll('.links a').forEach(link => {
-    const active = link.dataset.i18n === key;
+    const active = (link.dataset.route || link.dataset.i18n) === key;
     link.classList.toggle('active', active);
     if (active) link.setAttribute('aria-current', 'page');
     else link.removeAttribute('aria-current');
@@ -188,7 +188,10 @@ if (galleryMore) {
     galleryItems.filter(item => item.hidden).slice(0, galleryBatchSize).forEach(item => { item.hidden = false; });
     const remaining = galleryItems.filter(item => item.hidden).length;
     galleryMore.hidden = remaining === 0;
-    if (remaining) galleryMore.querySelector('span:last-child').textContent = `Show ${Math.min(galleryBatchSize, remaining)} more photos`;
+    if (remaining) {
+      const message = `Show ${Math.min(galleryBatchSize, remaining)} more photos`;
+      galleryMore.querySelector('span:last-child').textContent = localeText(message);
+    }
   };
 }
 let lb=document.querySelector('.lightbox');lb.querySelector('button').onclick=()=>lb.classList.remove('open');lb.onclick=e=>{if(e.target===lb)lb.classList.remove('open')};document.onkeydown=e=>{if(e.key==='Escape'){lb.classList.remove('open');closeMenu()}};
@@ -209,7 +212,7 @@ function pageRoute(url) {
   if (url.origin !== siteBase.origin || !url.pathname.startsWith(siteBase.pathname)) return null;
   const path = url.pathname.slice(siteBase.pathname.length).replace(/\/index\.html$/, '').replace(/\/$/, '');
   if (!path || path === 'index.html') return 'home';
-  return ['about','programs','activities','stories','event-details','teachers','news','events','gallery','rankings','contact'].includes(path) ? path : null;
+  return ['about','programs','program','stories','event-details','teachers','news','events','gallery','rankings','contact'].includes(path) ? path : null;
 }
 async function navigatePage(url, pushHistory = true) {
   const request = ++navigationRequest;
